@@ -1,88 +1,199 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 ul {
   list-style: none;
 }
-
 body {
-  background-color: #121214;
-  background-image: url(./assets/bg.svg);
-  background-position-x: center;
-  background-position-y: 55.6%;
+  background: #121214 url(./assets/bg.svg) no-repeat center/cover;
+  margin: auto;
 }
-
 body * {
   font-family: "Roboto", sans-serif;
 }
-
 #app {
   width: fit-content;
   margin: 52px auto;
 }
-
 header {
   margin-bottom: 63px;
+  text-align: center;
 }
-
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
 .card {
   padding: 32px 23px;
   text-align: center;
-
   background: #1d1c19;
   border-bottom: 2px solid #f7dd43;
   border-radius: 6px;
 }
-
 .card h2 {
   display: flex;
   gap: 16px;
   justify-content: center;
   align-items: center;
-
   padding: 8px 16px;
   border: 1px solid #746615;
   border-radius: 6px;
-
   width: fit-content;
   margin-inline: auto;
   margin-bottom: 53px;
-
   color: #f7dd43;
 }
-
 .card h2 span {
   color: #e1e1e6;
   font-size: 14px;
   text-transform: uppercase;
 }
-
 .card ul {
   display: flex;
   flex-direction: column;
   gap: 24px;
-
   width: 270px;
 }
-
-.card ul li  {
+.card ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.card ul li + li {
+.card ul li+li {
   padding-top: 24px;
   border-top: 1px solid #323238;
 }
-
 .card ul li strong {
   font-weight: 900;
   font-size: 36px;
   line-height: 125%;
-
   color: #E1E1E6;
+}
+@media (max-width: 1060px) {
+  body {
+    padding: 30px;
+  }
+  div#app {
+    margin: 40px auto;
+  }
+  header {
+    margin-bottom: 40px;
+  }
+  .card {
+    padding: 25px 15px;
+  }
+  .card h2 {
+    gap: 13px;
+    padding: 6px 12px;
+    margin-bottom: 36px;
+  }
+  .card h2 span {
+    font-size: 12px;
+  }
+  .card ul {
+    gap: 16px;
+    width: 220px;
+  }
+  .card ul li+li {
+    padding-top: 18px;
+  }
+  .card ul li strong {
+    font-size: 30px;
+  }
+}
+@media (max-width: 900px) {
+  body {
+    padding: 30px;
+  }
+
+  div#app {
+    margin: 40px auto;
+  }
+
+  header {
+    margin-bottom: 40px;
+  }
+
+  #cards {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .card {
+    padding: 25px 15px;
+  }
+
+  .card h2 {
+    gap: 13px;
+    padding: 6px 12px;
+    margin-bottom: 36px;
+  }
+
+  .card h2 span {
+    font-size: 12px;
+  }
+
+  .card ul {
+    gap: 16px;
+    width: 220px;
+  }
+
+  .card ul li+li {
+    padding-top: 18px;
+  }
+
+  .card ul li strong {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    padding: 50px;
+  }
+
+  div#app {
+    margin: 30px auto;
+  }
+
+  header {
+    margin-bottom: 30px;
+  }
+
+  #cards {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  .card h2 {
+    gap: 10px;
+    padding: 6px 10px;
+    margin-bottom: 36px;
+  }
+
+  .card h2 span {
+    font-size: 10px;
+  }
+
+  .card ul {
+    gap: 12px;
+    width: 200px;
+  }
+
+  .card ul li+li {
+    padding-top: 14px;
+  }
+
+  .card ul li strong {
+    font-size: 24px;
+  }
 }
